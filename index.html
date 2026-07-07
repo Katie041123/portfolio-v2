@@ -7,9 +7,9 @@
   <meta name="description" content="何静瑶 · 中山大学传播学 · 内容创作者与品牌故事讲述者 · 雇主品牌 / 新媒体运营 / 视觉设计">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <style>
     :root {
       --bg: #FAFBFF;
@@ -38,11 +38,6 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
-    /* Image performance: prevent layout shift, add fade-in on load */
-    img { background: #f0eef5; transition: opacity 0.3s ease; }
-    img[loading="lazy"] { opacity: 0; }
-    img[loading="lazy"].loaded { opacity: 1; }
 
     body {
       font-family: 'Inter', 'Noto Sans SC', sans-serif;
@@ -2610,7 +2605,7 @@
       <div class="long-card">
         <div class="long-phone-frame">
           <div class="long-phone-scroll">
-            <img src="assets/longimg/健康传播推文.jpg" alt="健康传播推文" loading="lazy">
+            <img src="assets/longimg/健康传播推文.png" alt="健康传播推文">
           </div>
           <div class="long-scroll-hint"><span>滑动查看</span><div class="scroll-arrow"></div></div>
         </div>
@@ -2622,7 +2617,7 @@
       <div class="long-card">
         <div class="long-phone-frame">
           <div class="long-phone-scroll">
-            <img src="assets/longimg/校招回顾 - 微信推文版.jpg" alt="校招回顾推文" loading="lazy">
+            <img src="assets/longimg/校招回顾 - 微信推文版.png" alt="校招回顾推文">
           </div>
           <div class="long-scroll-hint"><span>滑动查看</span><div class="scroll-arrow"></div></div>
         </div>
@@ -2634,7 +2629,7 @@
       <div class="long-card">
         <div class="long-phone-frame">
           <div class="long-phone-scroll">
-            <img src="assets/longimg/启动推文.jpg" alt="启动推文" loading="lazy">
+            <img src="assets/longimg/启动推文.png" alt="启动推文">
           </div>
           <div class="long-scroll-hint"><span>滑动查看</span><div class="scroll-arrow"></div></div>
         </div>
@@ -2665,7 +2660,7 @@
         <div class="mat-dot mat-dot--purple" style="top:70%;left:40%;width:4px;height:4px;animation-delay:1.3s"></div>
       </div>
       <div class="work-card material-hero" onclick="openMaterialGallery()">
-        <div class="work-card-img-wrap"><img class="work-card-img" src="assets/materials/1.jpg" alt="offer礼包设计" loading="lazy"></div>
+        <div class="work-card-img-wrap"><img class="work-card-img" src="assets/materials/1.png" alt="offer礼包设计"></div>
         <div class="work-card-body">
           <span class="work-card-tag" style="background:var(--purple-light);color:var(--purple);">物料</span>
           <div class="work-card-title">offer 礼包设计</div>
@@ -2690,14 +2685,14 @@
         <p>左右滑动浏览 · 点击查看大图</p>
       </div>
       <div class="material-scroll" id="materialScroll">
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/2.jpg')"><img src="assets/materials/2.jpg" alt="物料设计" loading="lazy"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/3.jpg')"><img src="assets/materials/3.jpg" loading="lazy" alt="物料设计"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/4.jpg')"><img src="assets/materials/4.jpg" loading="lazy" alt="物料设计"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/5.jpg')"><img src="assets/materials/5.jpg" loading="lazy" alt="物料设计"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/6.jpg')"><img src="assets/materials/6.jpg" loading="lazy" alt="物料设计"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/7.jpg')"><img src="assets/materials/7.jpg" loading="lazy" alt="图文排版"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/8.jpg')"><img src="assets/materials/8.jpg" loading="lazy" alt="图文排版"></div>
-        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/9.jpg')"><img src="assets/materials/9.jpg" loading="lazy" alt="图文排版"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/2.png')"><img src="assets/materials/2.png" alt="物料设计"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/3.png')"><img src="assets/materials/3.png" alt="物料设计"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/4.png')"><img src="assets/materials/4.png" alt="物料设计"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/5.png')"><img src="assets/materials/5.png" alt="物料设计"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/6.png')"><img src="assets/materials/6.png" alt="物料设计"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/7.png')"><img src="assets/materials/7.png" alt="图文排版"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/8.png')"><img src="assets/materials/8.png" alt="图文排版"></div>
+        <div class="material-item" onclick="event.stopPropagation();openMaterialDetail('assets/materials/9.png')"><img src="assets/materials/9.png" alt="图文排版"></div>
       </div>
     </div>
 
@@ -2710,28 +2705,28 @@
     <!-- Videos -->
     <div class="works-videos" id="videoGallery" data-category="video">
       <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第一期.mp4')">
-        <div class="video-thumb" style="background-image:url('assets/videos/covers/1.jpg')"><div class="play-btn">▶</div></div>
+        <div class="video-thumb" style="background-image:url('assets/videos/covers/1.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第一期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
       <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第二期.mp4')">
-        <div class="video-thumb" style="background-image:url('assets/videos/covers/2.jpg')"><div class="play-btn">▶</div></div>
+        <div class="video-thumb" style="background-image:url('assets/videos/covers/2.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第二期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
       <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第三期终版.mp4')">
-        <div class="video-thumb" style="background-image:url('assets/videos/covers/3.jpg')"><div class="play-btn">▶</div></div>
+        <div class="video-thumb" style="background-image:url('assets/videos/covers/3.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第三期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
       <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第四期终版 (1).mp4')">
-        <div class="video-thumb" style="background-image:url('assets/videos/covers/4.jpg')"><div class="play-btn">▶</div></div>
+        <div class="video-thumb" style="background-image:url('assets/videos/covers/4.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第四期</div>
           <div class="video-card-duration">约2分钟</div>
@@ -2959,12 +2954,6 @@
   </div>
 
   <script>
-    // Lazy image fade-in on load
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-      if (img.complete) img.classList.add('loaded');
-      else img.addEventListener('load', () => img.classList.add('loaded'));
-    });
-
     gsap.registerPlugin(ScrollTrigger);
 
     // Hero entrance - choreographed with ui-animation easing
