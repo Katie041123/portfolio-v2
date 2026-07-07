@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Large video files (>100MB, exceeds GitHub limit)
+# Host on Cloudflare R2 or embed from external source
+assets/videos/*.mp4
+
+# Duplicate PPTX files (already have PDF versions, also exceed 100MB)
+assets/管培生PLOG加工合集.pptx
+assets/Icebreaking+PPT.pptx
