@@ -2704,28 +2704,28 @@
 
     <!-- Videos -->
     <div class="works-videos" id="videoGallery" data-category="video">
-      <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第一期.mp4')">
+      <div class="video-card" onclick="openModal('video', 'BV14eM46VE8N')">
         <div class="video-thumb" style="background-image:url('assets/videos/covers/1.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第一期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
-      <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第二期.mp4')">
+      <div class="video-card" onclick="openModal('video', 'BV14eM46VEM8')">
         <div class="video-thumb" style="background-image:url('assets/videos/covers/2.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第二期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
-      <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第三期终版.mp4')">
+      <div class="video-card" onclick="openModal('video', 'BV14eM46VEKz')">
         <div class="video-thumb" style="background-image:url('assets/videos/covers/3.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第三期</div>
           <div class="video-card-duration">约2分钟</div>
         </div>
       </div>
-      <div class="video-card" onclick="openModal('video', 'assets/videos/快问快答第四期终版 (1).mp4')">
+      <div class="video-card" onclick="openModal('video', 'BV14eM46VEK2')">
         <div class="video-thumb" style="background-image:url('assets/videos/covers/4.png')"><div class="play-btn">▶</div></div>
         <div class="video-card-body">
           <div class="video-card-title">快问快答 · 第四期</div>
@@ -2745,7 +2745,7 @@
       </div>
       <!-- Featured row: video + PPT -->
       <div class="video-featured-row">
-        <div class="video-card video-card-featured" onclick="openModal('video', 'assets/videos/破冰介绍视频.mp4')">
+        <div class="video-card video-card-featured" onclick="openModal('video', 'BV12eM46VEfA')">
           <div class="video-thumb"><div class="play-btn">▶</div></div>
           <div class="video-card-body">
             <div class="video-card-title">Icebreaking · 群像介绍视频</div>
@@ -3104,7 +3104,11 @@
       if (type === 'img') {
         content.innerHTML = '<img src="' + src + '" alt="Preview">';
       } else if (type === 'video') {
-        content.innerHTML = '<video src="' + src + '" controls autoplay style="width:100%;max-height:80vh;"></video>';
+        if (src.startsWith('BV')) {
+          content.innerHTML = '<iframe src="https://player.bilibili.com/player.html?bvid=' + src + '&autoplay=0" style="width:100%;aspect-ratio:16/9;border:none;" allowfullscreen scrolling="no"></iframe>';
+        } else {
+          content.innerHTML = '<video src="' + src + '" controls autoplay style="width:100%;max-height:80vh;"></video>';
+        }
       }
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
