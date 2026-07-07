@@ -12,10 +12,12 @@ desktop.ini
 # Logs
 *.log
 
-# Large video files (>100MB, exceeds GitHub limit)
+# Large video files that can't fit under 25MB (Cloudflare Pages limit)
 # Host on Cloudflare R2 or embed from external source
-assets/videos/*.mp4
 
-# Duplicate PPTX files (already have PDF versions, also exceed 100MB)
+# Large files that can't be compressed under 25MB
+assets/videos/快问快答第一期.mp4
+assets/videos/快问快答第二期.mp4
+assets/videos/快问快答第三期终版.mp4
+assets/videos/快问快答第四期终版 (1).mp4
 assets/管培生PLOG加工合集.pptx
-assets/Icebreaking+PPT.pptx
