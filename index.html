@@ -12,28 +12,28 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <style>
     :root {
-      --bg: #FAFBFF;
-      --bg-card: #FFFFFF;
-      --bg-glass: rgba(255,255,255,0.65);
-      --border: rgba(0,71,171,0.08);
-      --border-hover: rgba(0,71,171,0.18);
-      --text: #1A1A2E;
-      --text-dim: #4B5563;
-      --text-muted: #9CA3AF;
-      --accent: #0047AB;
-      --accent-light: rgba(0,71,171,0.08);
-      --accent-glow: rgba(0,71,171,0.12);
-      --gold: #C9A96E;
-      --gold-light: rgba(201,169,110,0.12);
-      --purple: #7C3AED;
-      --purple-light: rgba(124,58,237,0.08);
-      --gradient-1: linear-gradient(135deg, #0047AB, #7C3AED);
-      --gradient-hero: linear-gradient(135deg, #0047AB 0%, #7C3AED 50%, #C9A96E 100%);
+      --bg: #F5EBD2;
+      --bg-card: #FBF7EE;
+      --bg-glass: rgba(251,247,238,0.75);
+      --border: rgba(180,130,100,0.1);
+      --border-hover: rgba(180,130,100,0.22);
+      --text: #3D2E24;
+      --text-dim: #7A6A5A;
+      --text-muted: #B0A494;
+      --accent: #C4907A;
+      --accent-light: rgba(196,144,122,0.1);
+      --accent-glow: rgba(196,144,122,0.15);
+      --gold: #C4907A;
+      --gold-light: rgba(196,144,122,0.1);
+      --purple: #C4907A;
+      --purple-light: rgba(196,144,122,0.1);
+      --gradient-1: linear-gradient(135deg, #C4907A, #D4A99A);
+      --gradient-hero: linear-gradient(135deg, #8B5240 0%, #C4907A 50%, #A67055 100%);
       --radius: 20px;
       --radius-sm: 14px;
-      --shadow-sm: 0 2px 12px rgba(0,71,171,0.06);
-      --shadow-md: 0 8px 32px rgba(0,71,171,0.08);
-      --shadow-lg: 0 16px 48px rgba(0,71,171,0.1);
+      --shadow-sm: 0 2px 12px rgba(180,140,110,0.08);
+      --shadow-md: 0 8px 32px rgba(180,140,110,0.1);
+      --shadow-lg: 0 16px 48px rgba(180,140,110,0.12);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,22 +62,10 @@
       overflow: hidden;
     }
 
-    .mesh-bg::before {
-      content: '';
-      position: absolute;
-      width: 900px; height: 900px;
-      top: -250px; left: -200px;
-      background: radial-gradient(circle, rgba(0,71,171,0.10) 0%, transparent 70%);
-      animation: meshFloat 20s ease-in-out infinite;
-    }
-
+    .mesh-bg::before,
     .mesh-bg::after {
       content: '';
       position: absolute;
-      width: 700px; height: 700px;
-      bottom: -150px; right: -100px;
-      background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
-      animation: meshFloat 25s ease-in-out infinite reverse;
     }
 
     @keyframes meshFloat {
@@ -175,21 +163,21 @@
 
     .hero-orb-1 {
       width: 600px; height: 600px;
-      background: rgba(0,71,171,0.18);
+      background: rgba(212,169,154,0.06);
       top: -15%; left: 10%;
       animation: orbFloat 18s ease-in-out infinite;
     }
 
     .hero-orb-2 {
       width: 500px; height: 500px;
-      background: rgba(124,58,237,0.14);
+      background: rgba(196,144,122,0.05);
       bottom: -10%; right: 5%;
       animation: orbFloat 22s ease-in-out infinite reverse;
     }
 
     .hero-orb-3 {
       width: 300px; height: 300px;
-      background: rgba(201,169,110,0.12);
+      background: rgba(245,235,210,0.08);
       top: 40%; left: 55%;
       animation: orbFloat 15s ease-in-out infinite;
       animation-delay: -5s;
@@ -1560,9 +1548,9 @@
       height: 100%;
       border-radius: 16px;
       overflow: hidden;
-      background: linear-gradient(160deg, #F8F5FF, #F0E8FF, #E8DDFF);
-      border: 2px solid rgba(124,58,237,0.15);
-      box-shadow: 0 4px 20px rgba(124,58,237,0.06);
+      background: linear-gradient(160deg, #FDF8F0, #F5EBD8, #EDDCC8);
+      border: 2px solid rgba(180,140,100,0.15);
+      box-shadow: 0 4px 20px rgba(180,140,100,0.08);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -2405,7 +2393,7 @@
     </div>
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
-        <img class="about-photo" src="assets/photos/简历照片.jpg" alt="何静瑶">
+        <img class="about-photo" src="assets/photos/简历照片.jpg?v=2" alt="何静瑶">
         <div class="about-photo-ring"></div>
         <div class="about-float-label"><span class="icon">🎨</span> 创意设计</div>
         <div class="about-float-label"><span class="icon">✍️</span> 内容创作</div>
