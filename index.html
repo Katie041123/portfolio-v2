@@ -509,34 +509,47 @@
     /* ==================== EXPERIENCE ==================== */
     #experience { background: transparent; }
 
-    .timeline {
-      max-width: 900px;
+    /* Dual-column timeline */
+    .timeline-dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 1100px;
       margin: 0 auto;
+    }
+
+    .timeline-col-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 28px;
+      padding-left: 24px;
+    }
+
+    .timeline {
       position: relative;
+      padding-left: 24px;
     }
 
     .timeline::before {
       content: '';
       position: absolute;
-      left: 50%; top: 0; bottom: 0;
+      left: 6px; top: 0; bottom: 0;
       width: 2px;
       background: linear-gradient(180deg, transparent, var(--accent), var(--purple), transparent);
-      transform: translateX(-50%);
     }
 
     .timeline-item {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
       position: relative;
     }
 
-    .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
-
     .timeline-dot {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: -24px;
+      top: 28px;
       width: 14px; height: 14px;
       background: var(--accent);
       border: 3px solid var(--bg);
@@ -546,8 +559,8 @@
     }
 
     .timeline-content {
-      width: 42%;
-      padding: 28px;
+      width: 100%;
+      padding: 24px;
       border-radius: var(--radius);
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -804,10 +817,10 @@
 
     /* Long image works — phone scroll viewer */
     .works-long {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 40px auto 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
 
@@ -2250,11 +2263,8 @@
       .nav-dots { display: none; }
       section { padding: 80px 24px; }
 
-      .timeline::before { left: 20px; }
-      .timeline-item, .timeline-item:nth-child(odd) { flex-direction: row; }
-      .timeline-dot { left: 20px; }
-      .timeline-content { width: calc(100% - 50px); margin-left: 44px; }
-      .timeline-content::after { display: none; }
+      .timeline-dual { grid-template-columns: 1fr; gap: 32px; }
+      .timeline-col-title { text-align: center; padding-left: 0; }
 
       .works-gallery { gap: 14px; }
       .work-card { flex: 0 0 280px; }
@@ -2402,11 +2412,7 @@
       <div class="about-text reveal">
         <h3>Hi, I'm <span class="en">Jingyao</span></h3>
         <p>
-          中山大学传播学在读，目前在玛氏中国担任雇主品牌宣传实习生。
-          热爱内容创作与视觉设计，擅长将品牌故事转化为有温度的传播内容。
-          曾主导微信公众号运营，产出多篇 10w+ 爆文；具备丰富的海报设计、
-          长图文制作和短视频创作经验。同时作为影石创新校园创作者，
-          持续探索品牌与年轻用户之间的沟通方式。
+          中山大学传播学专业在读，具备雇主品牌与企业文化的复合实习经验。目前在三七互娱担任企业文化实习生，负责雇主品牌社媒运营、内部文化渠道传播及文化活动落地执行，参与"大暑×AI邪修凉茶铺""有植葱民杯"等员工活动策划与现场统筹，同时独立完成每日电台内容产出）。曾在玛氏中国担任雇主品牌宣传实习生，独立运营微信公众号与小红书双平台官方账号，深度参与Boot Camp入职营活动策划与现场执行。同时作为影石创新（Insta360）校园创作者，累计产出短视频超20条，个人账号播放量超23w。具备扎实的内容创作与视觉设计能力，擅长产出有温度、有传播力的内容。
         </p>
         <div class="edu-cards">
           <div class="edu-card">
@@ -2428,47 +2434,71 @@
   <section id="experience">
     <div class="section-header">
       <div class="section-label">Experience</div>
-      <h2>项目经历</h2>
+      <h2>关于经历</h2>
       <div class="section-divider"></div>
     </div>
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2025.05 — 至今</div>
-          <div class="timeline-title">校园创作者</div>
-          <div class="timeline-company">影石创新科技股份有限公司</div>
-          <div class="timeline-desc">
-            作为校园创作者，负责品牌在高校场景的内容策划与传播。
-            围绕产品特性创作创意内容，提升品牌在年轻群体中的认知度与好感度。
+    <div class="timeline-dual">
+      <!-- 左栏：项目经历 -->
+      <div class="timeline-col">
+        <h3 class="timeline-col-title">项目经历</h3>
+        <div class="timeline timeline--left">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025.05 — 2026.07</div>
+              <div class="timeline-title">校园创作者</div>
+              <div class="timeline-company">影石创新科技股份有限公司</div>
+              <div class="timeline-desc">
+                作为校园创作者，负责品牌在高校场景的内容策划与传播。
+                围绕产品特性创作创意内容，提升品牌在年轻群体中的认知度与好感度。
+              </div>
+              <span class="timeline-stat">品牌传播 · 创意内容</span>
+            </div>
           </div>
-          <span class="timeline-stat">品牌传播 · 创意内容</span>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2026.06 — 2026.06</div>
+              <div class="timeline-title">海外广告投放训练营学员</div>
+              <div class="timeline-company">三七互娱</div>
+              <div class="timeline-desc">
+                参与三七互娱2026暑期训练营，聚焦游戏行业海外广告投放核心岗位，完成线上实战课程。在资深导师全程带教下，系统学习一线游戏项目月流水破亿的投放策略与发行经验，完整拆解真实业务场景中的投放全流程。通过实战案例与定制化课程，将校园理论知识转化为职场实操能力，并通过项目考核。
+              </div>
+              <span class="timeline-stat">海外投放 · 游戏发行 · 实战考核</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2026.03 — 2026.07</div>
-          <div class="timeline-title">雇主品牌宣传实习生</div>
-          <div class="timeline-company">玛氏中国 Mars China</div>
-          <div class="timeline-desc">
-            负责雇主品牌内容创作与传播，参与校招项目全周期运营。
-            独立完成多张招聘海报设计，撰写健康传播推文，
-            运营微信公众号并实现多篇 10w+ 爆文。
+      <!-- 右栏：实习经历 -->
+      <div class="timeline-col">
+        <h3 class="timeline-col-title">实习经历</h3>
+        <div class="timeline timeline--left">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2026.07 — 至今</div>
+              <div class="timeline-title">企业文化实习生</div>
+              <div class="timeline-company">三七互娱</div>
+              <div class="timeline-desc">
+                负责雇主品牌社媒内容策划与发布，运营内部文化传播渠道，以员工故事、街访、采访等形式提升文化影响力；策划落地"大暑×AI邪修凉茶铺""有植葱民杯"等文化活动，涵盖动线设计、物料统筹与现场执行；独立完成每日电台内容产出。参与企业文化价值观可视化表达，协助将抽象理念转化为有温度、可传播的个体叙事。
+              </div>
+              <span class="timeline-stat">内宣渠道运营 · 文化活动落地 · 音频内容制作</span>
+            </div>
           </div>
-          <span class="timeline-stat">10w+ 爆文 · 全周期校招运营</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2026.06 — 2026.06</div>
-          <div class="timeline-title">海外广告投放训练营学员</div>
-          <div class="timeline-company">三七互娱</div>
-          <div class="timeline-desc">
-            参与三七互娱2026暑期训练营，聚焦游戏行业海外广告投放核心岗位，完成线上实战课程。在资深导师全程带教下，系统学习一线游戏项目月流水破亿的投放策略与发行经验，完整拆解真实业务场景中的投放全流程。通过实战案例与定制化课程，将校园理论知识转化为职场实操能力，并通过项目考核。
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2026.03 — 2026.07</div>
+              <div class="timeline-title">雇主品牌宣传实习生</div>
+              <div class="timeline-company">玛氏中国 Mars China</div>
+              <div class="timeline-desc">
+                负责雇主品牌内容创作与传播，参与校招项目全周期运营。
+                独立完成多张招聘海报设计，撰写健康传播推文，
+                运营微信公众号并实现多篇 10w+ 爆文。
+              </div>
+              <span class="timeline-stat">10w+ 爆文 · 全周期校招运营</span>
+            </div>
           </div>
-          <span class="timeline-stat">海外投放 · 游戏发行 · 实战考核</span>
         </div>
       </div>
     </div>
@@ -2531,8 +2561,8 @@
         <h3>Tools</h3>
         <div class="tool-grid">
           <div class="tool-card">
-            <div class="tool-icon">🎬</div>
-            <div class="tool-name">Premiere Pro</div>
+            <div class="tool-icon">🎵</div>
+            <div class="tool-name">Audition</div>
             <div class="tool-level">熟练</div>
           </div>
           <div class="tool-card">
@@ -2681,6 +2711,18 @@
         <div class="long-card-body">
           <span class="work-card-tag" style="margin-bottom:8px;display:inline-block;">长图文</span>
           <div class="long-card-title">启动推文 · 排版设计</div>
+        </div>
+      </div>
+      <div class="long-card">
+        <div class="long-phone-frame">
+          <div class="long-phone-scroll">
+            <img src="assets/longimg/凉茶铺.jpg" alt="凉茶铺推文">
+          </div>
+          <div class="long-scroll-hint"><span>滑动查看</span><div class="scroll-arrow"></div></div>
+        </div>
+        <div class="long-card-body">
+          <span class="work-card-tag" style="margin-bottom:8px;display:inline-block;">长图文</span>
+          <div class="long-card-title">凉茶铺 · 长图文设计</div>
         </div>
       </div>
     </div>
